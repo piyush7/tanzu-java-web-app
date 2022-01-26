@@ -5,6 +5,10 @@ metadata:
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: tanzu-java-web-app
+    apps.tanzu.vmware.com/has-tests:  "true"  
+    tanzu.app.live.view: "true" 
+    tanzu.app.live.view.application.name: "tanzu-java-web-app"
+ 
 spec:
   source:
     git:

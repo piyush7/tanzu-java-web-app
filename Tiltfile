@@ -1,6 +1,7 @@
-SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='your-registry.io/project/tanzu-java-web-app-source')
+SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='harbor.dorn.tkg-aws-e2-lab.winterfell.katirap.xyz/tap/tanzu-java-web-app-default-bundle')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='dev')
+allow_k8s_contexts('gke_pa-sincandela_europe-west3-a_tap')
 
 k8s_custom_deploy(
     'tanzu-java-web-app',
